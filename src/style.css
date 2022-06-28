@@ -1,3 +1,80 @@
-p{
-    color: red;
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family:sans-serif ;
+    background-color: lightblue;
+}
+
+.flex {
+    display:flex;
+}
+
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 3fr 4fr;
+    grid-template-rows: 1fr 9fr 1fr;
+    border: 3px solid black;
+    color: green;
+}
+
+.header{
+    grid-column: 1/4;
+    grid-row: 1;
+    border-bottom: 3px solid black;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar{
+    grid-column: 1;
+    grid-row: 2;
+    border-right: 3px solid black;
+}
+
+
+
+.daily-tasks {
+    margin-left: 15px;
+    gap: 20px;
+}
+
+.project-tasks-today{
+    margin-left: 15px;
+    gap: 20px;
+}
+
+.within-week{
+    margin-left: 15px;
+    gap: 20px;
+}
+
+.projects{
+    justify-content: center;
+}
+
+.main-info{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.image{
+    grid-column: 3;
+    grid-row: 2;
+    background-image: url('../src/img/art-alain.jpg');
+/*     maybe do it in html instead? want it to keep its native dimensions'
+    possibly and then be centered? or do i want to make it fit to size? */
+    background-repeat: no-repeat;
+    justify-content: center;
+    background-color: black;
+    padding-left: 40px;
+}
+
+.footer{
+    grid-column: 1/4;
+    grid-row: 3;
+    border-top: 3px solid black;
+    justify-content: center;
+    align-items: center;
 }
