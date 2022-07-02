@@ -64,19 +64,16 @@ body{
     grid-row: 2;
     background-repeat: no-repeat;
     background-position: center;
-    justify-content: center;
     background-color: black;
-    padding-left: 40px;
-}
-
-.mon{
-    background-image: url('../src/img/art-alain.jpg');
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    color: white;
 }
-/* ^ make classes in java apply styling in java, url's and 
-text in an array that cycles based on the day of the week */
+
+.image a:visited {
+    color: white;
+  }
 
 .footer{
     grid-column: 1/4;
