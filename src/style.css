@@ -18,7 +18,7 @@ body{
     border: 3px solid black;
     color: green;
 }
-
+/* probably would want minmax's for sizing too */
 .header{
     grid-column: 1/4;
     grid-row: 1;
@@ -62,14 +62,21 @@ body{
 .image{
     grid-column: 3;
     grid-row: 2;
-    background-image: url('../src/img/art-alain.jpg');
-/*     maybe do it in html instead? want it to keep its native dimensions'
-    possibly and then be centered? or do i want to make it fit to size? */
     background-repeat: no-repeat;
+    background-position: center;
     justify-content: center;
     background-color: black;
     padding-left: 40px;
 }
+
+.mon{
+    background-image: url('../src/img/art-alain.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+/* ^ make classes in java apply styling in java, url's and 
+text in an array that cycles based on the day of the week */
 
 .footer{
     grid-column: 1/4;
