@@ -5,5 +5,4 @@ import * as projects from './modules/module-projects';
 
 console.log("tessssst");
 
-image.imgClassSetter();
-image.createLink();
+image.imgRender();
