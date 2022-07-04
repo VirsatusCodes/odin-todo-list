@@ -39,6 +39,9 @@ body{
     margin-left: 15px;
     gap: 20px;
 }
+.daily-tasks :hover{
+    background-color: rebeccapurple;
+}
 
 .project-tasks-today{
     margin-left: 15px;
