@@ -15,10 +15,22 @@ function wipeDOM(){
 image.imgRender();
 
 const dailyTasksButton = document.querySelector('.daily-tasks');
+const removeButtons = document.getElementsByClassName('remove-task');
 
 dailyTasksButton.addEventListener('click', () => {
     wipeDOM()
     daily.renderUI();
     daily.dailyTasksLibrary.forEach(daily.renderTasks);
-})
+    Array.from(removeButtons).forEach(removeButtonWiring);
+});
+
+function removeButtonWiring(button){
+    button.addEventListener('click', (function (e) {
+        console.log('12');
+        daily.dailyTasksLibrary.splice(e.target.dataset.indexNumber, 1);
+        wipeDOM();
+        daily.renderUI();
+        daily.renderTasks();
+}));
+};
 

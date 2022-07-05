@@ -10,6 +10,8 @@ const createTasks = (taskName, taskTime) => {
 const task1 = createTasks('Wake Up!','8:00');
 dailyTasksLibrary.push(task1);
 
+
+
 function renderUI(){
     const UIContainer = document.createElement('div');
     UIContainer.classList.add('box');
@@ -26,6 +28,9 @@ function renderUI(){
 };
 
 function renderTasks(task){
+    let tick = 0
+
+    for(let i = 0; i < dailyTasksLibrary.length; i++){
     const taskContainer = document.createElement('div');
     taskContainer.classList.add('box');
     mainInfo.appendChild(taskContainer);
@@ -40,6 +45,11 @@ function renderTasks(task){
 
     const removeTaskButton = document.createElement('button');
     removeTaskButton.classList.add('remove-task');
+    removeTaskButton.dataset.indexNumber= tick;
+    tick++;
     removeTaskButton.textContent = '-';
     taskContainer.appendChild(removeTaskButton);
+    }
 };
+
+
