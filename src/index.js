@@ -1,9 +1,8 @@
-export{wipeDOM, dailyTaskDOMFill}
-import './style.css'
+export{wipeDOM, dailyTaskDOMFill};
+import './style.css';
 import * as daily from './modules/module-daily';
 import * as image from './modules/module-image';
 import * as projects from './modules/module-projects';
-console.log("tessssst");
 
 function wipeDOM(){
     const mainInfo = document.querySelector('.main-info');
@@ -12,23 +11,42 @@ function wipeDOM(){
     }
 }
 
+/* projects module rendering BEGGINNING */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* projects module rendering END */
+
+/* image rotation module rendering BEGGINNING */
 image.imgRender();
+/* image rotation module rendering END */
 
-const dailyTasksButton = document.querySelector('.daily-tasks');
-const removeButtons = document.getElementsByClassName('remove-task');
-const addButton = document.getElementsByClassName('add-task');
-
+/* daily tasks module rendering BEGGINNING */
 function dailyTaskDOMFill() {
+    const removeButtons = document.getElementsByClassName('remove-task');
+    const addButton = document.getElementsByClassName('add-task');
+    
     daily.renderAddATask();
     daily.renderTasks();
     Array.from(addButton).forEach(addButtonWiring);
     Array.from(removeButtons).forEach(removeButtonWiring);
 }
 
+const dailyTasksButton = document.querySelector('.daily-tasks');
 dailyTasksButton.addEventListener('click', () => {
     wipeDOM();
     dailyTaskDOMFill();
-    console.log(daily.dailyTasksLibrary)
 });
 
 function addButtonWiring(button){
@@ -46,3 +64,4 @@ function removeButtonWiring(button){
         dailyTaskDOMFill();
 }));
 };
+/* daily tasks module rendering END */

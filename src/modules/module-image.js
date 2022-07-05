@@ -1,4 +1,4 @@
-export{imgRender}
+export{imgRender};
 import alain from '.././img/art-alain.jpg';
 import nicola from '.././img/art-nicola.jpg';
 import daniel from '.././img/art-daniel.jpg';
@@ -38,4 +38,4 @@ function imgRender(){
   
     symbolSpan.appendChild(link);
     img.appendChild(symbolSpan);
-}
+};

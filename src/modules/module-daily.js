@@ -1,5 +1,6 @@
-export{renderAddATask, renderTasks, dailyTasksLibrary, addTasks, renderAddTaskUI}
-import * as index from '../index'
+export{renderAddATask, renderTasks, dailyTasksLibrary, addTasks, renderAddTaskUI};
+import * as index from '../index';
+
 const mainInfo = document.querySelector('.main-info');
 const dailyTasksLibrary = [];
 
@@ -38,7 +39,6 @@ pushTasktoLibrary.addEventListener('click', () => {
 function addTasks(input1, input2){
 const newTask = createTasks(input1, input2);
 dailyTasksLibrary.push(newTask);
-console.log(dailyTasksLibrary)
 };
 
 function renderAddATask(){
@@ -57,7 +57,7 @@ function renderAddATask(){
 };
 
 function renderTasks(){
-    let tick = 0
+    let tick = 0;
 
     for(let i = 0; i < dailyTasksLibrary.length; i++){
     const taskContainer = document.createElement('div');
@@ -78,7 +78,7 @@ function renderTasks(){
     tick++;
     removeTaskButton.textContent = '-';
     taskContainer.appendChild(removeTaskButton);
-    }
+    };
 };
 
 
